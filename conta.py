@@ -50,9 +50,9 @@ class Conta:
             self.__limite = 0
             print("Sua conta foi excluida com sucesso")
 
-    def transferencia(self, valor, origem, destino):
-         if origem.__saldo >= valor:
-            origem.sacar(valor)   
+    def transferencia(self, valor, destino):
+         if self.__saldo >= valor:
+            self.sacar(valor)   
             destino.depositar( valor)
             print("Tranferência realizada com sucesso")
          else:
