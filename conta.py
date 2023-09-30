@@ -15,7 +15,7 @@ class Conta:
         self.__saldo += valor
 
     def depositar_debido_limite(self, valor):
-        self.__saldo += valor    
+        self.__limite += valor    
 
     def sacar(self, valor):
         if self.__saldo >= valor:
@@ -49,6 +49,14 @@ class Conta:
             self.__saldo = 0
             self.__limite = 0
             print("Sua conta foi excluida com sucesso")
+
+    def transferencia(self, valor, origem, destino):
+         if origem.__saldo >= valor:
+            origem.sacar(valor)   
+            destino.depositar( valor)
+            print("Tranferência realizada com sucesso")
+         else:
+             print(f"Saldo insuficiente, o saldo da sua conta é: {self.__saldo}")     
 
         
 
