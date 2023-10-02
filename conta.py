@@ -7,6 +7,23 @@ class Conta:
         self.__saldo = saldo
         self.__limite = limite
 
+
+
+    def get_saldo(self):
+        return self.__saldo
+    
+    def get_numero_conta(self):
+        return self.__numero
+    
+    def get_limite(self):
+        return self.__limite
+    
+    def set_limite(self, limite):
+        self.__limite = limite
+    
+    def get_titular(self):
+        return self.__titutlar
+    
     def extrato(self):
         print(f"O saldo da conta é {self.__saldo} para o titular {self.__titular}") 
 
