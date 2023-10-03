@@ -36,27 +36,11 @@ class Conta:
         self.__limite += valor    
 
     def sacar(self, valor):
-        if self.__saldo >= valor:
+        if (valor <= (self.__saldo + self.__limite)):
             self.__saldo -= valor
         else:
-            print(f"saldo insuficiente, seu saldo é {self.__saldo}")    
+            print(f"saldo insuficiente, seu saldo é {self.__saldo + self.__limite}")    
     
-    def sacar_limite(self, valor):
-        if self.__limite >= valor:
-            self.__limite -= valor
-        else:
-            print("saldo do limite insuficiente")
-    
-    def cancelar_limite(self): 
-        if self.__limite < 1000:
-            valor = self.__limite
-            valor -= 1000
-            print("Para cancelar o limite primeiro vc precisa quitar seu debito")
-            print(f"Seu debito atual é: {valor}")
-        else:
-            self.__limite = 0
-            print("Cheque especial cancelado.")    
-
     def excluir_conta(self):
         if self.__saldo > 0:
             print("Para cancelar sua conta primeira saque todos os valores de sua conta")
