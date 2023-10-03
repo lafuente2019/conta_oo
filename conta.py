@@ -59,6 +59,8 @@ class Conta:
             print("Tranferência realizada com sucesso")
          else:
              print(f"Saldo insuficiente, o saldo da sua conta é: {self.__saldo}")     
-
-        
+    
+    @staticmethod
+    def codigo_banco():
+        return "001"    
 
