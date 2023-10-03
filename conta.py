@@ -7,8 +7,6 @@ class Conta:
         self.__saldo = saldo
         self.__limite = limite
 
-
-
     def get_saldo(self):
         return self.__saldo
     
@@ -26,7 +24,6 @@ class Conta:
     
     def extrato(self):
         print(f"O saldo da conta é {self.__saldo} para o titular {self.__titular}") 
-
 
     def depositar(self, valor):
         self.__saldo += valor
@@ -59,7 +56,7 @@ class Conta:
     def excluir_conta(self):
         if self.__saldo > 0:
             print("Para cancelar sua conta primeira saque todos os valores de sua conta")
-            print(f"__saldo em conta: {self.__saldo}")
+            print(f"Seu saldo em conta é: {self.__saldo}")
         else:
             self.__numero = 0
             self.__titular = 0
